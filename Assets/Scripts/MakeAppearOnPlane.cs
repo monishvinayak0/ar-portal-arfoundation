@@ -38,7 +38,10 @@ public class MakeAppearOnPlane : MonoBehaviour
         {
             m_Rotation = value;
             if (m_SessionOrigin != null)
-                m_SessionOrigin.MakeContentAppearAt(content, content.transform.position, m_Rotation);
+            {
+              //  m_SessionOrigin.MakeContentAppearAt(content, content.transform.position, m_Rotation);
+            }
+               
         }
     }
 
@@ -63,7 +66,7 @@ public class MakeAppearOnPlane : MonoBehaviour
 
             // This does not move the content; instead, it moves and orients the ARSessionOrigin
             // such that the content appears to be at the raycast hit position.
-            m_SessionOrigin.MakeContentAppearAt(content, hitPose.position, m_Rotation);
+         //   m_SessionOrigin.MakeContentAppearAt(content, hitPose.position, m_Rotation);
         }
     }
 

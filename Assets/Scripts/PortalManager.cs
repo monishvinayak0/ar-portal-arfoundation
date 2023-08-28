@@ -1,4 +1,4 @@
-﻿// (c) 2020 Tongzhou Yu
+﻿
 
 using System.Collections;
 using System.Collections.Generic;

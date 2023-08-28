@@ -14,6 +14,23 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_LoaderManagerInstance: {fileID: -1288103008799272734}
   m_InitManagerOnStart: 1
+--- !u!114 &-5079427649862174422
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4c3631f5e58749a59194e0cf6baf6d5, type: 3}
+  m_Name: Android Providers
+  m_EditorClassIdentifier: 
+  m_RequiresSettingsUpdate: 0
+  m_AutomaticLoading: 0
+  m_AutomaticRunning: 0
+  m_Loaders:
+  - {fileID: 11400000, guid: 3f178cd7183a8be4d94da089a09a6e7b, type: 2}
 --- !u!114 &-4250967414372948016
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -56,10 +73,25 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d2dc886499c26824283350fa532d087d, type: 3}
   m_Name: XRGeneralSettings
   m_EditorClassIdentifier: 
-  Keys: 0400000001000000
+  Keys: 040000000100000007000000
   Values:
   - {fileID: -4250967414372948016}
   - {fileID: -8522687285237845095}
+  - {fileID: 6133449646238918753}
+--- !u!114 &6133449646238918753
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d236b7d11115f2143951f1e14045df39, type: 3}
+  m_Name: Android Settings
+  m_EditorClassIdentifier: 
+  m_LoaderManagerInstance: {fileID: -5079427649862174422}
+  m_InitManagerOnStart: 1
 --- !u!114 &8210668033072050769
 MonoBehaviour:
   m_ObjectHideFlags: 0

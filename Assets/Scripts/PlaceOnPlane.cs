@@ -2,6 +2,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.XR.ARFoundation;
 using UnityEngine.XR.ARSubsystems;
+using TMPro;
 
 /// <summary>
 /// Listens for touch events and performs an AR raycast from the screen touch point.
@@ -16,6 +17,12 @@ public class PlaceOnPlane : MonoBehaviour
     [SerializeField]
     [Tooltip("Instantiates this prefab on a plane at the touch location.")]
     GameObject m_PlacedPrefab;
+    [SerializeField]
+    ARPlaneManager m_planeManager;
+    
+    public TextMeshProUGUI tmpro1, tmpro2;
+
+
 
 
 
@@ -73,10 +80,21 @@ public class PlaceOnPlane : MonoBehaviour
             if ((spawnedObject == null))
             {
                 spawnedObject = Instantiate(m_PlacedPrefab, hitPose.position, hitPose.rotation);
+                m_PlacedPrefab.isStatic = true;
+                tmpro1.text = "static mesh";
+                foreach(var plane in m_planeManager.trackables)
+                {
+                    Destroy(plane.gameObject);
+                    m_planeManager.enabled = false;
+                    tmpro2.text = "planes destroyed";
+                }
+
+
             }
             else
             {
-                spawnedObject.transform.position = hitPose.position;
+             // spawnedObject.transform.position = hitPose.position;
+                
             }
         }
     }
