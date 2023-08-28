@@ -80,6 +80,7 @@ public class PlaceOnPlane : MonoBehaviour
             if ((spawnedObject == null))
             {
                 spawnedObject = Instantiate(m_PlacedPrefab, hitPose.position, hitPose.rotation);
+              //m_PlacedPrefab.gameObject.transform.rotation = Quaternion.Euler(0f, 180f, 0f);
                 m_PlacedPrefab.isStatic = true;
                 tmpro1.text = "static mesh";
                 foreach(var plane in m_planeManager.trackables)
