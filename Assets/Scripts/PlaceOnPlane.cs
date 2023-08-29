@@ -20,7 +20,7 @@ public class PlaceOnPlane : MonoBehaviour
     [SerializeField]
     ARPlaneManager m_planeManager;
     
-    public TextMeshProUGUI tmpro1, tmpro2;
+   
 
 
 
@@ -82,12 +82,13 @@ public class PlaceOnPlane : MonoBehaviour
                 spawnedObject = Instantiate(m_PlacedPrefab, hitPose.position, hitPose.rotation);
               //m_PlacedPrefab.gameObject.transform.rotation = Quaternion.Euler(0f, 180f, 0f);
                 m_PlacedPrefab.isStatic = true;
-                tmpro1.text = "static mesh";
+                
                 foreach(var plane in m_planeManager.trackables)
                 {
                     Destroy(plane.gameObject);
                     m_planeManager.enabled = false;
-                    tmpro2.text = "planes destroyed";
+                   
+                   
                 }
 
 

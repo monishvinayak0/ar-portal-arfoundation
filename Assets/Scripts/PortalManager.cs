@@ -23,7 +23,7 @@ public class PortalManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        SetMaterials(false);
+       // SetMaterials(false);
         foreach (GameObject obj in objects)
         {
             obj.SetActive(false);

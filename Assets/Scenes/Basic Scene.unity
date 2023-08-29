@@ -99,7 +99,7 @@ LightmapSettings:
     m_LightProbeSampleCountMultiplier: 4
   m_LightingDataAsset: {fileID: 112000000, guid: 819d0305af70e744bb3e548c35e40fda,
     type: 2}
-  m_LightingSettings: {fileID: 4890085278179872738, guid: abdfb1ca5672144449e61561ba187345,
+  m_LightingSettings: {fileID: 4890085278179872738, guid: 203a2eeb2bae3f648845b8600423a1f3,
     type: 2}
 --- !u!196 &4
 NavMeshSettings:
@@ -322,8 +322,6 @@ MonoBehaviour:
   m_PlacedPrefab: {fileID: 133634549633132446, guid: 3ec46f7bb097c6a4da6ebe3eec9824a5,
     type: 3}
   m_planeManager: {fileID: 0}
-  tmpro1: {fileID: 0}
-  tmpro2: {fileID: 0}
 --- !u!114 &184902958
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -553,8 +551,6 @@ MonoBehaviour:
   m_PlacedPrefab: {fileID: 56506617344736198, guid: f9cc7d43cb79c8346a520d65fa1f38e8,
     type: 3}
   m_planeManager: {fileID: 1254801216}
-  tmpro1: {fileID: 2119539088}
-  tmpro2: {fileID: 1361650575}
 --- !u!114 &1254801211
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1333,7 +1329,7 @@ Light:
   m_Type: 1
   m_Shape: 0
   m_Color: {r: 1, g: 0.95686275, b: 0.8392157, a: 1}
-  m_Intensity: 10
+  m_Intensity: 1
   m_Range: 10
   m_SpotAngle: 30
   m_InnerSpotAngle: 21.80208
@@ -1405,7 +1401,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2123219059}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 866fd6a750020be46b33beb80b6e14f2, type: 3}
   m_Name: 
