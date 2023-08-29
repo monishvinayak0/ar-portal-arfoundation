@@ -18,10 +18,16 @@ public class PortalManager : MonoBehaviour
 
     bool hasCollided;
 
+    public GameObject[] objects;
+   public static int triggerTime ;
     // Start is called before the first frame update
     void Start()
     {
         SetMaterials(false);
+        foreach (GameObject obj in objects)
+        {
+            obj.SetActive(false);
+        }
     }
 
     void SetMaterials(bool fullRender)
@@ -51,6 +57,11 @@ public class PortalManager : MonoBehaviour
         wasInFront = GetIsInFront();
         hasCollided = true;
 
+      
+
+      
+
+
     }
 
     // Update is called once per frame
@@ -60,6 +71,8 @@ public class PortalManager : MonoBehaviour
         if (collider.transform != MainCamera.transform)
             return;
         hasCollided = false;
+        triggerTime++;
+       
     }
 
     void whileCameraColliding()
@@ -71,6 +84,7 @@ public class PortalManager : MonoBehaviour
         {
             inOtherWorld = !inOtherWorld;
             SetMaterials(inOtherWorld);
+           
         }
         wasInFront = isInFront;
     }
@@ -83,6 +97,20 @@ public class PortalManager : MonoBehaviour
     private void Update()
     {
         whileCameraColliding();
+        if(triggerTime%2 == 0)
+        {
+            foreach (GameObject obj in objects)
+            {
+                obj.SetActive(false);
+            }
+        }
+        else
+        {
+            foreach (GameObject obj in objects)
+            {
+                obj.SetActive(true);
+            }
+        }
     }
 
 }
