@@ -6,8 +6,17 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
+    path: Assets/Scenes/UI_Scene.unity
+    guid: ed3fee7bdc22161479b61a7fdeb5f6b4
+  - enabled: 1
     path: Assets/Scenes/Basic Scene.unity
     guid: 4c1feb22d7049c5458b5517dd369d728
+  - enabled: 1
+    path: Assets/Scenes/360 Video Scene.unity
+    guid: 47e59cb8c806d63418606a7c28b564cd
+  - enabled: 1
+    path: Assets/Scenes/Animated Door Scene.unity
+    guid: 9a24c0b851c73e042847c504c9db1203
   m_configObjects:
     UnityEditor.XR.ARCore.ARCoreSettings: {fileID: 11400000, guid: 1b04765d1c6c4954e881d6efbfa72c7f,
       type: 2}

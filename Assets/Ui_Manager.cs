@@ -4,6 +4,10 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 public class Ui_Manager : MonoBehaviour
 {
+    [SerializeField]
+    private GameObject roomPrefab;
+    
+    
     // Start is called before the first frame update
     void Start()
     {
@@ -13,7 +17,22 @@ public class Ui_Manager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        DontDestroyOnLoad(this);
+        if(SceneManager.GetActiveScene().buildIndex == 1)
+        {
+            SceneCheck();
+        }
+    }
+
+
+    public void SceneCheck()
+    {
+        PlaceOnPlane.Instance.placedPrefab = roomPrefab;
+    }
+
+    public void LoadRoom(GameObject go)
+    {
+        roomPrefab = go;
     }
 
     public void LoadScene(int sceneIndex)

@@ -14,9 +14,10 @@ using TMPro;
 [RequireComponent(typeof(ARRaycastManager))]
 public class PlaceOnPlane : MonoBehaviour
 {
+    public static PlaceOnPlane Instance;
     [SerializeField]
     [Tooltip("Instantiates this prefab on a plane at the touch location.")]
-    GameObject m_PlacedPrefab;
+    public GameObject m_PlacedPrefab;
     [SerializeField]
     ARPlaneManager m_planeManager;
     
@@ -43,6 +44,11 @@ public class PlaceOnPlane : MonoBehaviour
     void Awake()
     {
         m_RaycastManager = GetComponent<ARRaycastManager>();
+        
+    }
+    private void Start()
+    {
+        Instance = this;
     }
 
     bool TryGetTouchPosition(out Vector2 touchPosition)
