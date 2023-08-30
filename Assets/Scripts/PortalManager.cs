@@ -18,12 +18,14 @@ public class PortalManager : MonoBehaviour
 
     bool hasCollided;
 
+    public int InteractTime;
+
     public GameObject[] objects;
    public static int triggerTime ;
     // Start is called before the first frame update
     void Start()
     {
-       // SetMaterials(false);
+        SetMaterials(false);
         foreach (GameObject obj in objects)
         {
             obj.SetActive(false);
@@ -61,17 +63,21 @@ public class PortalManager : MonoBehaviour
 
       
 
+      
+
 
     }
 
     // Update is called once per frame
     void OnTriggerExit(Collider collider)
     {
+
         GameObject MainCamera = GameObject.FindGameObjectWithTag("MainCamera");
         if (collider.transform != MainCamera.transform)
             return;
         hasCollided = false;
         triggerTime++;
+       
        
     }
 

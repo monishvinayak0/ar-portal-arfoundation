@@ -48,6 +48,7 @@ public class PlaceOnPlane : MonoBehaviour
     }
     private void Start()
     {
+        
         Instance = this;
     }
 
